@@ -1,13 +1,34 @@
 <template>
   <div>
-    <nuxt />
+    <NavBar></NavBar>
+    <slot name="sub-header" />
+    <main>
+      <div class="container container-main">
+        <Nuxt />
+      </div>
+    </main>
   </div>
 </template>
 
+
+<script>
+import NavBar from "../components/NavBar";
+export default {
+  name: "SiteTemplate",
+  data() {
+    return {};
+  },
+  components: {
+    NavBar,
+  },
+  created() {},
+};
+</script>
+
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -18,8 +39,8 @@ html {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
 }

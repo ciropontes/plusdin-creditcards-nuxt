@@ -1,17 +1,9 @@
 <template>
   <div v-if="this.card">
-    <span v-if="user">
-      <p class="card-title-user-name">
-        <b>{{ user.name }},</b>
-      </p>
-      <p class="blue-text">
-        Nossa melhor recomendação de cartão para o seu perfil é:
-      </p>
-    </span>
     <p v-if="card" class="card-title-card-name">{{ card.name }}</p>
     <p class="card-image">
       <img
-      v-if="this.card.image_file"
+        v-if="this.card.image_file"
         :src="this.card.image_file.url"
         alt="imagem cartão"
         width="200"
@@ -76,6 +68,7 @@ p {
 .card-title-card-name {
   font-size: 2.5em;
   color: #555;
+  text-align: center;
 }
 .card-image {
   display: flex;
@@ -85,13 +78,5 @@ p {
 }
 .card-info .col {
   text-align: center;
-}
-.button-card-required {
-  width: 70%;
-}
-@media only screen and (max-width: 600px) {
-  .button-card-required {
-    width: 100%;
-  }
 }
 </style>

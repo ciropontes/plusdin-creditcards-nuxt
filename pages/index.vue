@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="ad-unit" data-position="top" />
-    <div class="row" style="flex-wrap: nowrap">
+    <div class="row main-row">
       <div
         class="card-ranking-list center-align"
         data-ignore-ads-near="true"
@@ -61,7 +61,6 @@ export default {
 
 <style>
 .card-container {
-  width: 70%;
   margin: 20px auto;
   padding: 20px 10px;
 }
@@ -73,10 +72,17 @@ export default {
   float: right;
   z-index: 9;
 }
-
+.main-row {
+  flex-wrap: nowrap;
+}
 @media only screen and (max-width: 600px) {
   .card-container {
     width: 100%;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .main-row {
+    gap: 20px;
   }
 }
 </style>

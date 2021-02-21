@@ -32,7 +32,7 @@ export default {
       {
         innerHTML: `window.dxp_wrapper_config = {
         gamId: "21842055933",
-        domainId: "plusdin",
+        domainId: "focosaude",
         enableInterstitial: true,
         disableRebid: true,
         bidders: {

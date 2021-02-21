@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="ad-unit" data-position="top" />
-    <div class="row" style="flex-wrap: nowrap">
+    <div class="row main-row">
       <div class="card-container">
         <card-detail-title :card="card"></card-detail-title>
         <p>
@@ -65,15 +65,21 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .card-container {
-  width: 70%;
   margin: 20px auto;
   padding: 20px 10px;
   text-align: center;
 }
-
+.main-row {
+  flex-wrap: nowrap;
+}
 @media only screen and (max-width: 600px) {
   .card-container {
     width: 100%;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .main-row {
+    gap: 20px;
   }
 }
 </style>
